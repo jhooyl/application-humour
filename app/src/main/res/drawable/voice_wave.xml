@@ -1,0 +1,11 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="24dp"
+    android:viewportWidth="120"
+    android:viewportHeight="24">
+
+    <!-- Couleur de la courbe (noire ici, mais modifiable via tint) -->
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M10,11h3v2h-3z M16,8h3v8h-3z M22,5h3v14h-3z M28,9h3v6h-3z M34,4h3v16h-3z M40,7h3v10h-3z M46,10h3v4h-3z M52,2h3v20h-3z M58,8h3v8h-3z M64,5h3v14h-3z M70,11h3v2h-3z M76,6h3v12h-3z M82,9h3v6h-3z M88,3h3v18h-3z M94,7h3v10h-3z M100,10h3v4h-3z"/>
+</vector>

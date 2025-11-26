@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "909067787518",
+    "project_id": "humour-f5074",
+    "storage_bucket": "humour-f5074.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:909067787518:android:5a4df1828e1d5bc0b899af",
+        "android_client_info": {
+          "package_name": "com.example.humour"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAn_20ibRyztLT6IkxOFscC0lAzX85oJz4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

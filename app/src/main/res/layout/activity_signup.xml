@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightblue">
+
+    <!-- Image qui prend tout le haut de l'écran -->
+    <ImageView
+        android:id="@+id/signupTopImage"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/signup_top" />
+
+    <!-- Texte "Welcome!" positionné sur l'image -->
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to my mood"
+        android:textSize="30sp"
+        android:fontFamily="@font/montmedium"
+        android:textColor="@color/black"
+        android:layout_below="@id/signupTopImage"
+        android:layout_marginTop="-100dp"
+        android:layout_marginLeft="28dp"
+        android:rotation="1" />
+
+    <!-- Contenu centré en dessous de l'image -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingHorizontal="20dp"
+        android:layout_below="@id/signupTopImage">
+
+        <!-- Espace pour le texte "Welcome!" qui est maintenant sur l'image -->
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="60dp" />
+
+        <!-- Conteneur pour le formulaire de sign up -->
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="550dp"
+            android:layout_marginTop="100dp"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/blue">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="439dp"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="24dp"
+                    android:fontFamily="@font/montsemibold"
+                    android:text="Sign Up"
+                    android:textColor="@color/orange"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <!-- Email avec icône -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/emailEditText"
+                    style="@style/RoundedTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeColor="@color/black"
+                    app:hintTextColor="@color/black"
+                    app:startIconDrawable="@drawable/email"
+                    app:startIconTint="@color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montreguler"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress"
+                        android:paddingVertical="16dp"
+                        android:textColor="@color/black" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Password avec icône -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/passwordEditText"
+                    style="@style/RoundedTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeColor="@color/black"
+                    app:hintTextColor="@color/black"
+                    app:startIconDrawable="@drawable/lock"
+                    app:startIconTint="@color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montreguler"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:paddingVertical="16dp"
+                        android:textColor="@color/black" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Confirm Password avec icône -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/confirmPasswordEditText"
+                    style="@style/RoundedTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeColor="@color/black"
+                    app:hintTextColor="@color/black"
+                    app:startIconDrawable="@drawable/lock"
+                    app:startIconTint="@color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montreguler"
+                        android:hint="Confirm Password"
+                        android:inputType="textPassword"
+                        android:paddingVertical="16dp"
+                        android:textColor="@color/black" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/signupButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/orange"
+                    android:fontFamily="@font/montsemibold"
+                    android:text="Sign Up"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</RelativeLayout>
