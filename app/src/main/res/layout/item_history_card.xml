@@ -8,8 +8,7 @@
     android:layout_marginBottom="16dp"
     app:cardCornerRadius="20dp"
     app:cardElevation="0dp"
-    app:cardBackgroundColor="#64D8E6">
-    <!-- Note: Remplace #64D8E6 par la couleur exacte de tes cartes -->
+    app:cardBackgroundColor="@color/blue">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -26,7 +25,7 @@
             app:layout_constraintTop_toTopOf="parent"
             android:contentDescription="Mood Emoji" />
 
-        <!-- 2. Orange Line (Le drawable que tu as mentionné) -->
+        <!-- 2. Orange Line -->
         <ImageView
             android:id="@+id/ivLine"
             android:layout_width="12dp"
@@ -77,44 +76,11 @@
             android:fontFamily="@font/montmedium"
             android:textColor="@color/black"
             android:textSize="14sp"
+            android:maxLines="1"
+            android:ellipsize="end"
             app:layout_constraintStart_toStartOf="@id/tvDate"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvMood" />
-
-        <!-- 6. Audio Button (Le bouton orange avec le micro) -->
-        <LinearLayout
-            android:id="@+id/btnAudio"
-            android:layout_width="150dp"
-            android:layout_height="44dp"
-            android:layout_marginTop="24dp"
-            android:background="@drawable/mic_container"
-            android:gravity="center_vertical"
-            android:paddingHorizontal="20dp"
-            android:orientation="horizontal"
-            app:layout_constraintStart_toStartOf="@id/tvDate"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvNotes"
-            app:layout_constraintBottom_toBottomOf="parent">
-
-            <!-- 1. Icône Micro -->
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/micro"
-                app:tint="@color/black"/>
-
-            <!-- 2. Onde sonore (simulée) -->
-            <!-- layout_weight=1 permet de prendre tout l'espace restant -->
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="24dp"
-                android:layout_weight="1"
-                android:layout_marginStart="12dp"
-                android:src="@drawable/voice_wave"
-                android:scaleType="fitCenter"
-                app:tint="@color/black"/>
-
-        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

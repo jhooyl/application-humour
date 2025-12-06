@@ -1,5 +1,6 @@
 package com.example.humour
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.humour.databinding.ActivityHomeBinding
@@ -23,6 +24,15 @@ class HomeActivity : AppCompatActivity() {
         updateDate()
         fetchRealWeather()
         setupNavigation()
+
+        // Navigation to ChoseActivity
+        binding.circleBackground.setOnClickListener {
+            startActivity(Intent(this, ChoseActivity::class.java))
+        }
+
+        binding.addButton.setOnClickListener {
+            startActivity(Intent(this, ChoseActivity::class.java))
+        }
     }
 
     private fun updateDate() {
@@ -52,7 +62,8 @@ class HomeActivity : AppCompatActivity() {
                 runOnUiThread {
                     // En cas d'erreur
                     binding.temperatureTextView.text = "Error"
-                    binding.weatherMessageTextView.text = "Unable to fetch weather data. Check your API key."
+                    binding.weatherMessageTextView.text =
+                        "Unable to fetch weather data. Check your API key."
                 }
             }
         }
@@ -72,17 +83,25 @@ class HomeActivity : AppCompatActivity() {
         }
     }
 
+
     private fun setupNavigation() {
+        // Home (Déjà dessus)
         binding.homeButton.setOnClickListener {
-            // Already on Home
+            // Rien à faire
         }
 
+        // Stats
         binding.statsButton.setOnClickListener {
-            // Launch stats activity
+            val intent = Intent(this, StatsActivity::class.java)
+            startActivity(intent)
+            overridePendingTransition(0, 0)
         }
 
+        // History
         binding.historyButton.setOnClickListener {
-            // Launch history activity
+            val intent = Intent(this, HistoryActivity::class.java)
+            startActivity(intent)
+            overridePendingTransition(0, 0)
         }
     }
 }
