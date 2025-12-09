@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Humour</string>
+    <string name="MyMood">Humour</string>
     <string name="home">Home</string>
     <string name="stats">Stats</string>
     <string name="history">History</string>
