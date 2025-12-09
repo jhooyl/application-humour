@@ -60,7 +60,7 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     // Pour les coroutines (programmation asynchrone)
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
-    // Pour les permissions (si vous voulez la localisation plus tard)
+    // Pour les permissions
     implementation("androidx.activity:activity-ktx:1.7.0")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

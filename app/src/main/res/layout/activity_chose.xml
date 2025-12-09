@@ -126,7 +126,7 @@
                     android:textSize="14sp" />
             </LinearLayout>
 
-            <!-- Then -->
+            <!-- Meh -->
             <LinearLayout
                 android:id="@+id/mood_then_layout"
                 android:layout_width="0dp"

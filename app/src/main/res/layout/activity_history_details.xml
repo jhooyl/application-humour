@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/lightblue">
 
-    <!-- 1. HEADER (Unchanged) -->
+    <!-- 1. HEADER -->
     <LinearLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
@@ -46,7 +46,7 @@
         </LinearLayout>
     </LinearLayout>
 
-    <!-- 2. SCROLLABLE CARD (Restructured with RelativeLayout) -->
+    <!-- 2. SCROLLABLE CARD -->
     <androidx.cardview.widget.CardView
         android:id="@+id/main_card"
         android:layout_width="match_parent"
@@ -60,12 +60,10 @@
         app:cardCornerRadius="30dp"
         app:cardElevation="0dp">
 
-        <!-- This RelativeLayout allows for the sticky footer -->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <!-- Scrollable Content Area -->
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -140,7 +138,7 @@
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
-    <!-- 3. BOTTOM NAVIGATION (Unchanged) -->
+    <!-- 3. BOTTOM NAVIGATION -->
     <LinearLayout
         android:id="@+id/bottom_nav"
         android:layout_width="match_parent"

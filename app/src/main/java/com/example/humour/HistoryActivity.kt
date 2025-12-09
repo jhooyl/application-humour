@@ -21,7 +21,6 @@ class HistoryActivity : AppCompatActivity() {
     // 1. On prépare la liste vide
     private val historyList = mutableListOf<JournalEntry>()
 
-    // 2. On déclare l'adapter (mais on l'initialise plus tard)
     private lateinit var adapter: HistoryAdapter
 
     private val db = Firebase.firestore
@@ -33,12 +32,10 @@ class HistoryActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setupDate()
-        setupBottomNavigation() // Ta navigation du bas
+        setupBottomNavigation()
 
-        // 3. On configure le RecyclerView
         setupRecyclerView()
 
-        // 4. On va chercher les données
         fetchHistoryData()
     }
 
@@ -48,7 +45,6 @@ class HistoryActivity : AppCompatActivity() {
     }
 
     private fun setupRecyclerView() {
-        // C'est ici qu'on branche l'adapter
         adapter = HistoryAdapter(historyList)
         binding.historyRecyclerView.layoutManager = LinearLayoutManager(this)
         binding.historyRecyclerView.adapter = adapter
@@ -89,7 +85,6 @@ class HistoryActivity : AppCompatActivity() {
                     binding.historyRecyclerView.visibility = View.VISIBLE
                     binding.emptyStateView.visibility = View.GONE
 
-                    // 4. C'EST ICI LA SOLUTION : On dit à l'adapter que les données ont changé
                     adapter.notifyDataSetChanged()
                 }
             }
@@ -114,6 +109,5 @@ class HistoryActivity : AppCompatActivity() {
             overridePendingTransition(0, 0)
         }
 
-        // History : on ne fait rien car on y est déjà
     }
 }

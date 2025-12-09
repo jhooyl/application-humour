@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/lightblue">
 
-    <!-- Header Section (Ton code existant) -->
+    <!-- Header Section -->
     <LinearLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
@@ -34,8 +34,6 @@
         </LinearLayout>
     </LinearLayout>
 
-    <!-- ZONE CENTRALE : Contenu Dynamique -->
-    <!-- Cette FrameLayout prend toute la place entre le Header et le Menu du bas -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -43,7 +41,6 @@
         android:layout_above="@id/bottom_nav">
 
         <!-- 1. CAS : IL Y A DE L'HISTORIQUE -->
-        <!-- La liste défilante qui utilisera item_history_card.xml -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/historyRecyclerView"
             android:layout_width="match_parent"
@@ -52,10 +49,9 @@
             android:clipToPadding="false"
             android:visibility="gone"
             />
-        <!-- Note: visibility="gone" par défaut, tu le passeras à visible si DB > 0 -->
 
 
-        <!-- 2. CAS : PAS D'HISTORIQUE (Empty State) -->
+        <!-- 2. CAS : PAS D'HISTORIQUE -->
         <LinearLayout
             android:id="@+id/emptyStateView"
             android:layout_width="match_parent"
@@ -72,7 +68,6 @@
                 android:src="@drawable/empty_box"
                 android:alpha="0.6"
                 android:contentDescription="Empty" />
-            <!-- Remplace empty_box_icon par une image de ton choix -->
 
             <TextView
                 android:layout_width="wrap_content"
@@ -99,7 +94,7 @@
     </FrameLayout>
 
 
-    <!-- Bottom Navigation (Ton code existant) -->
+    <!-- Bottom Navigation -->
     <LinearLayout
         android:id="@+id/bottom_nav"
         android:layout_width="match_parent"

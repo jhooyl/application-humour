@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="@color/lightblue">
 
-    <!-- ================= HEADER (Ton code existant) ================= -->
+    <!-- HEADER -->
     <LinearLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
@@ -32,7 +32,7 @@
         </LinearLayout>
     </LinearLayout>
 
-    <!-- ================= CONTENU CENTRAL (Stats) ================= -->
+    <!-- CONTENU CENTRAL -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -81,7 +81,6 @@
                 android:background="?android:attr/selectableItemBackgroundBorderless"/>
         </LinearLayout>
 
-        <!-- 2. LE CAMEMBERT (PieChart) -->
         <com.github.mikephil.charting.charts.PieChart
             android:id="@+id/pieChart"
             android:layout_width="match_parent"
@@ -90,8 +89,6 @@
             android:layout_marginVertical="20dp"
             android:layout_marginHorizontal="30dp"/>
 
-        <!-- 3. LA LÉGENDE (Emojis + Texte + Points couleur) -->
-        <!-- weightSum=5 permet de diviser la largeur en 5 parts égales -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -238,7 +235,7 @@
         </LinearLayout>
     </LinearLayout>
 
-    <!-- ================= BOTTOM NAVIGATION (Ton code existant) ================= -->
+    <!-- BOTTOM NAVIGATION -->
     <LinearLayout
         android:id="@+id/bottom_nav"
         android:layout_width="match_parent"

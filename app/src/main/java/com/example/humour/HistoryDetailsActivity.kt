@@ -41,14 +41,13 @@ class HistoryDetailsActivity : AppCompatActivity() {
             finish()
         }
 
-        // Configuration de la navigation du bas (optionnel sur une page de détail, mais possible)
         setupBottomNavigation()
     }
 
     private fun setupBottomNavigation() {
         binding.homeButton.setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
-            // Animation fluide
+
             intent.flags = Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
             startActivity(intent)
             overridePendingTransition(0, 0)
@@ -61,6 +60,5 @@ class HistoryDetailsActivity : AppCompatActivity() {
             overridePendingTransition(0, 0)
         }
 
-        // History : on ne fait rien car on y est déjà
     }
 }

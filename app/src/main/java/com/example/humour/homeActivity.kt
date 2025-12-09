@@ -25,7 +25,7 @@ class HomeActivity : AppCompatActivity() {
         fetchRealWeather()
         setupNavigation()
 
-        // Navigation to ChoseActivity
+
         binding.circleBackground.setOnClickListener {
             startActivity(Intent(this, ChoseActivity::class.java))
         }
@@ -87,17 +87,15 @@ class HomeActivity : AppCompatActivity() {
     private fun setupNavigation() {
         // Home (Déjà dessus)
         binding.homeButton.setOnClickListener {
-            // Rien à faire
+
         }
 
-        // Stats
         binding.statsButton.setOnClickListener {
             val intent = Intent(this, StatsActivity::class.java)
             startActivity(intent)
             overridePendingTransition(0, 0)
         }
 
-        // History
         binding.historyButton.setOnClickListener {
             val intent = Intent(this, HistoryActivity::class.java)
             startActivity(intent)

@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     android:background="@color/lightblue">
 
-    <!-- Image qui prend tout le haut de l'écran -->
     <ImageView
         android:id="@+id/signupTopImage"
         android:layout_width="match_parent"
@@ -13,7 +12,6 @@
         android:scaleType="centerCrop"
         android:src="@drawable/signup_top" />
 
-    <!-- Texte "Welcome!" positionné sur l'image -->
     <TextView
         android:id="@+id/welcomeText"
         android:layout_width="wrap_content"
@@ -27,7 +25,6 @@
         android:layout_marginLeft="28dp"
         android:rotation="1" />
 
-    <!-- Contenu centré en dessous de l'image -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -42,8 +39,6 @@
             android:layout_height="60dp" />
 
         <!-- Conteneur pour le formulaire de sign up -->
-
-
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="550dp"

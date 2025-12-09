@@ -7,7 +7,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.humour.databinding.ActivityChoseBinding
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import java.text.SimpleDateFormat
@@ -90,12 +89,10 @@ class ChoseActivity : AppCompatActivity() {
         }
     }
 
-    // Remplace ton ancienne méthode saveMoodToFirebaseAndContinue par celle-ci :
     private fun saveMoodToFirebaseAndContinue() {
-        // On ne vérifie pas Firebase tout de suite pour éviter le blocage
+
         val currentDateStr = binding.dateTextView.text.toString()
 
-        // Création de l'intention pour aller vers NotesActivity
         val intent = Intent(this, NotesActivity::class.java)
 
         // On "attache" les informations à l'intent pour les récupérer après

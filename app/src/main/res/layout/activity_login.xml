@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     android:background="@color/lightblue">
 
-    <!-- Image qui prend tout le haut de l'écran -->
     <ImageView
         android:id="@+id/loginTopImage"
         android:layout_width="match_parent"
@@ -13,7 +12,6 @@
         android:scaleType="centerCrop"
         android:src="@drawable/login_top" />
 
-    <!-- Texte "Hello!" positionné sur l'image -->
     <TextView
         android:id="@+id/helloText"
         android:layout_width="wrap_content"
@@ -27,7 +25,6 @@
         android:layout_marginLeft="41dp"
         android:rotation="1" />
 
-    <!-- Contenu centré en dessous de l'image -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

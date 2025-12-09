@@ -37,7 +37,6 @@ class HistoryAdapter(private val entries: List<JournalEntry>) :
             }
             ivEmoji.setImageResource(iconRes)
 
-            // --- AJOUT DU CLIC ICI ---
             root.setOnClickListener {
                 val context = holder.itemView.context
                 val intent = Intent(context, HistoryDetailsActivity::class.java)
